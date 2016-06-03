@@ -1,0 +1,41 @@
+// FONTS
+// Import all webfonts here
+//https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+
+@font-face {
+  font-family: 'gotham_book';
+  src: url('../fonts/gotham-book.eot');
+  src: url('../fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gotham-book.woff2') format('woff2'),
+       url('../fonts/gotham-book.woff') format('woff'),
+       url('../fonts/gotham-book.ttf') format('truetype'),
+       url('../fonts/gotham-book.svg#gotham_bookregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dinpro_condmedium';
+  src: url('../fonts/Dinpro_condmedium.eot');
+  src: url('../fonts/Dinpro_condmedium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Dinpro_condmedium.woff2') format('woff2'),
+       url('../fonts/Dinpro_condmedium.woff') format('woff'),
+       url('../fonts/Dinpro_condmedium.ttf') format('truetype'),
+       url('../fonts/Dinpro_condmedium.svg#gotham_bookregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'jeles_regularregular';
+  src: url('../fonts/56b9aa4092e79142090f85e1_jeles_regular.eot');
+  src: url('../fonts/56b9aa4092e79142090f85e1_jeles_regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/56b9aa4092e79142090f85e1_jeles_regular.woff2') format('woff2'),
+       url('../fonts/56b9aa4092e79142090f85e1_jeles_regular.woff') format('woff'),
+       url('../fonts/56b9aa4092e79142090f85e1_jeles_regular.ttf') format('truetype'),
+       url('../fonts/56b9aa4092e79142090f85e1_jeles_regular.svg#jeles_regularregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
