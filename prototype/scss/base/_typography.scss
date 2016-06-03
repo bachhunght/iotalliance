@@ -1,54 +1,6 @@
 // TYPOGRAPHY
 // Define all typographic styles in this file.
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @include dinpro-condmedium;
-  color: $gray-1;
-  font-weight: normal;
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-size: 38px;
-  line-height: 44px;
-  margin-top: 20px;
-}
-
-h2 {
-  font-size: 32px;
-  line-height: 36px;
-  margin-top: 20px;
-}
-
-h3 {
-  font-size: 24px;
-  line-height: 30px;
-  margin-top: 20px;
-}
-
-h4 {
-  font-size: 18px;
-  line-height: 24px;
-  margin-top: 10px;
-}
-
-h5 {
-  font-size: 14px;
-  line-height: 20px;
-  margin-top: 10px;
-}
-
-h6 {
-  font-size: 12px;
-  line-height: 18px;
-  margin-top: 10px;
-}
-
 a {
   color: $orange;
   text-decoration: none;
@@ -82,87 +34,345 @@ ol {
 }
 
 
-.panel-title {
-  @include dinpro-condmedium;
-  color: $gray-2;
-  font-size: 2.4em;
-  font-style: normal;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-bottom: 30px;
-  padding-top: 40px;
-  text-align: center;
-  text-transform: uppercase;
+/* 1. Reset default styles - start
+   ========================================================================== */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,
+ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: none;
 }
 
-.node-title,
-.panel-node-title {
-  @include jeles-regularregular;
-  border-bottom: 1px none $orange;
-  border-style: none;
-  color: $gray-1;
-  font-size: 3em;
-  letter-spacing: 0;
-  margin-bottom: 40px;
-  padding-bottom: 30px;
-  text-transform: none;
-}
-
-.sidebar-block-title {
-  @include dinpro-condmedium;
-  border-top: 1px none $black;
-  color: $gray-4;
-  font-size: 1.6em;
-  font-weight: 400;
-  letter-spacing: 0;
-  margin-top: 0;
-  padding-bottom: 20px;
-  padding-top: 0;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-
-.read-more {
-   @include dinpro-condmedium;
-  background-color: transparent;
-  border-radius: 0;
-  border: 0 none;
-  color: $orange-1;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.4em;
-  line-height: inherit;
-  padding: 9px 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 300ms ease 0s;
-
-  &:hover {
-    opacity: .9;
-    transform: scale(1.02);
-  }
-}
-
-
-.panel-title-has-border {
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-
-  .h2.center {
-    @include dinpro-condmedium;
-    border-top: 1px solid $orange-1;
-    color: $gray-2;
-    font-size: 2.4em;
-    font-style: normal;
-    font-weight: 400;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-bottom: 30px;
-    padding-top: 40px;
-    text-align: center;
-  }
 }
+
+input, textarea, button, select, a, li, div {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+blockquote {
+  quotes: none;
+}
+
+blockquote:before,blockquote:after {
+  content: '';
+  content: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: medium none;
+  vertical-align: middle;
+}
+
+table th{
+  border: 0;
+  padding: 5px 7px;
+  text-align: center;
+}
+
+table td {
+  padding: 5px 10px;
+  text-align: center;
+}
+
+a img {
+  border: none;
+}
+
+
+
+/* #Reset default styles - end
+   ========================================================================== */
+
+
+/* 2. Remove browser specific styles - start
+   ========================================================================== */
+
+li,a,div,span{
+  -webkit-tap-highlight-color:transparent;
+}
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+/* #Remove browser specific styles - End
+   ========================================================================== */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+/* =WordPress Core End
+-------------------------------------------------------------- */
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clear:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+html {
+  height: 100%;
+  margin: 0 !important;
+  @include qodefTransition(all 0.33s ease-out);
+  overflow-y: scroll !important; /* to prevent page jumping on ajax and when there is not enough content */
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  line-height: 23px;
+  color: $default-text-color;
+  font-weight: 500;
+  background-color: $default-background-color;
+  overflow-x: hidden !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.097em;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 1.284em;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 1.2em;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 1.508em;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+}
+
+h5 {
+  font-size: 19px;
+  line-height: 1.4em;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+}
+
+h6 {
+  font-size: 15px;
+  line-height: 1.5em;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h1 a,
+h2, h2 a{
+  color: #202020;
+}
+
+h3, h3 a,
+h5, h5 a{
+  color: #222222;
+}
+
+
+h6, h6 a{
+  color: #212121;
+}
+
+h4, h4 a{
+  color: #797979
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover{
+  color: $first-main-color;
+}
+
+a,
+p a {
+  color: $first-main-color;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 0.15s ease-out;
+  -moz-transition: color 0.15s ease-out;
+  -o-transition: color 0.15s ease-out;
+  -ms-transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out;
+}
+
+ul, ol {
+  list-style-position:inside;
+}
+
+pre {
+  background-color: $default-background-color;
+  padding: 15px;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 15px 0;
+}
+
+dt {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+dd {
+  margin-bottom: 15px;
+}
+
+sub, sup {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  top: 0.5ex;
+}
+
+sup {
+  bottom: 0.5ex;
+}
+
+.wp-caption-text {
+  margin: 0;
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+}
+
+table thead tr, table tbody tr {
+  border: 1px solid #e6e6e6;
+}
+
+table tbody th {
+  border-right: 1px solid #e6e6e6;
+}
+
+
+blockquote cite {
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Webkit */
+::selection {
+  background: $first-main-color;
+  color: $default-background-color;
+}
+/* Gecko/Mozilla */
+::-moz-selection {
+  background: $first-main-color;
+  color: $default-background-color;
+}
+
+.alignleft {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+
+.aligncenter {
+  display: block;
+  margin: 10px auto;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
