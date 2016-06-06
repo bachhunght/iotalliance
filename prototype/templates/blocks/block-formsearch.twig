@@ -1,0 +1,15 @@
+{% block searchform %}
+
+  <div class="block-search search-form-style1 right " id="block-search-form">
+    <div class="toggle-search form-submit">
+      <i class="ion-ios-search-strong"></i>
+    </div>
+    <form action="http://localhost:3000/" class="searchform" id="searchform" method="get" role="search">
+        <div>
+          <input type="text" id="s" name="s" value=" " placeholder="search content" class="form-text">
+          <input type="submit" value="Search" id="searchsubmit" class="form-submit">
+        </div>
+    </form>;
+  </div>
+
+{% endblock %}
