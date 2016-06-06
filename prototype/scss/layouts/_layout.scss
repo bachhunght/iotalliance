@@ -138,6 +138,7 @@ body {
     }
   }
 }
+
 /* style box search */
 .block-search-form-wrapper {
   .toggle-search.form-submit {
@@ -179,4 +180,37 @@ body {
       }
     }
   }
+}
+/* foooter summit */
+footer input.wpcf7-form-control.wpcf7-submit {
+  border-radius: 0 3px 3px 0;
+  color: #fff;
+  display: inline-block;
+  font-family: simple-line-icons,sans-serif;
+  font-size: 20px;
+  height: 40px;
+  line-height: 36px;
+  padding: 0 8px;
+  vertical-align: top;
+  width: 40px;
+}
+
+footer input[type="submit"],
+footer input.wpcf7-form-control.wpcf7-submit {
+  background-color: #b2dd4c;
+  border: 2px solid #b2dd4c;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: simple-line-icons,sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  height: 52px;
+  letter-spacing: 1px;
+  line-height: 50px;
+  padding: 0 35px;
+  text-transform: uppercase;
+  transition: color 0.15s ease-out 0s, background-color 0.15s ease-out 0s, border-color 0.15s ease-out 0s;
+  width: auto;
 }
