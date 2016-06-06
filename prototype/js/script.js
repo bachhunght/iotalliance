@@ -36,7 +36,17 @@
       $(this).addClass('hidden');
     }
     $('.toggle-search .ion-ios-search-strong').addClass('avtive').removeClass('hidden');
+  });
 
+  $('.box-service__items__img').matchHeight();
+
+  $('.box-service__items__img').each(function (){
+    var height_item = $(this).outerHeight();
+    var height_img = $(this).find('img').height();
+    console.log('height item' + height_item);
+    console.log('height img' + height_img);
+    var height_margin = height_item - height_img;
+    $(this).find('img').css({'margin-top': height_margin});
   });
 
 }(this, this.document, this.jQuery));
