@@ -1,0 +1,18 @@
+{% set cta = [
+    {
+      'body': 'StarIt is filled with a variety of shortcodes and elements, made especially for you.',
+      'text_link': 'Check it out now'
+    },
+  ] 
+%}
+
+{% block cta %}
+  <div class="cta clearfix container">
+    {% for component in cta %}
+      <div class="cta__content">
+        <div class="cta__body">{{ component.body }}</div>
+        <a href="#" class="btn btn__white"><span class="btn__text">Check It Out Now</span><span class="btn__icon fa fa-long-arrow-right"></span></a>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
