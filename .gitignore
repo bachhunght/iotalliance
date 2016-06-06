@@ -1,0 +1,4 @@
+prototype/.npm/node_modules
+prototype/.npm/node_modules/*
+prototype/.npm/bower_components
+prototype/.npm/bower_components/*
