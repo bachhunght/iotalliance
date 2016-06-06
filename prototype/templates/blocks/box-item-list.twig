@@ -1,0 +1,31 @@
+{% set BoxItemList = [
+  {
+    'title': 'item 1',
+    'link': '#'
+  },
+
+  {
+    'title': 'item 1',
+    'link': '#'
+  },
+
+  {
+    'title': 'item 1',
+    'link': '#'
+  },
+
+  {
+    'title': 'item 1',
+    'link': '#'
+  },
+
+  ] %}
+{% block blockItemList %}
+  <ul class="box-list">
+    {% for itemlist in BoxItemList %}
+      <li class="box-list__item">
+        <a href="{{itemlist.link}}">{{itemlist.title}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,44 @@
+.box-list {
+  &__item {
+    border-bottom: 1px dotted #404040;
+    list-style: none;
+    margin-bottom: 0;
+    text-transform: capitalize;
+
+    a {
+      color: #a2a2a2;
+      padding: 6px 0;
+      display: inline-block;
+      width: 100%;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        height: 48%;
+        position: absolute;
+        left: -10px;
+        border-left: 3px solid #b2dd4c;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity .15s ease-out;
+        opacity: 0;
+      }
+      &:hover {
+        color: #fff;
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      a {
+        color: #fff;
+      }
+
+      a:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
