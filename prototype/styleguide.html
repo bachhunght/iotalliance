@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeDefault.min.css">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/ionicons.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -85,17 +86,20 @@
           </li>
         </ul>
       </nav>
+    </div>
+    <div class="block-search-form-wrapper">
 
       <div class="block-search search-form-style1 right " id="block-search-form">
         <div class="toggle-search form-submit">
           <i class="ion-ios-search-strong"></i>
+          <i class="ion-close hidden"></i>
         </div>
         <form action="http://localhost:3000/" class="searchform" id="searchform" method="get" role="search">
           <div>
-            <input type="text" id="s" name="s" value=" " placeholder="search content" class="form-text">
-            <input type="submit" value="Search" id="searchsubmit" class="form-submit">
+            <input type="text" id="s" name="s" placeholder="search" class="form-text">
+
           </div>
-        </form>;
+        </form>
       </div>
 
     </div>

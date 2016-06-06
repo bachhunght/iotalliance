@@ -19,6 +19,25 @@
 
   // Add  functionality here.
 
+  $( ".ion-ios-search-strong" ).on( "click", function() {
+    if($(this).hasClass('hidden')){
+      $(this).removeClass('avtive');
+    }
+    $(this).addClass('hidden').removeClass('avtive');
+    $('.toggle-search .ion-close').addClass('avtive').removeClass('hidden');
+    // $('.block-search-form-wrapper form').addClass('avtive');
+    $('.block-search-form-wrapper form').show();
+  });
+
+  $(".ion-close").on( "click", function() {
+    if($(this).hasClass('avtive')){
+      $('.block-search-form-wrapper form').hide('fast');
+      $(this).removeClass('avtive');
+      $(this).addClass('hidden');
+    }
+    $('.toggle-search .ion-ios-search-strong').addClass('avtive').removeClass('hidden');
+
+  });
 
 }(this, this.document, this.jQuery));
 

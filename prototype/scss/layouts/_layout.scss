@@ -38,6 +38,7 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
+
 .header-logo {
   padding-top: 5px;
 
@@ -64,10 +65,27 @@ body {
   line-height: 24px;
 
   .footer-column  {
-    width: 25%;
-    float: left;
     padding: 30px;
-    border-right: 1px solid #3b3b3b;
+
+    @media screen and (min-width: 769px) {
+      width: 50%;
+      float: left;
+      border-right: 1px solid #3b3b3b;
+      margin-bottom: 30px;
+      padding-bottom: 0;
+
+      &.footer-column-2 {
+        border-right: none;
+      }
+    }
+
+    @media screen and (min-width: 1025px) {
+      width: 25%;
+      padding: 30px;
+      &.footer-column-2 {
+        border-right: 1px solid #3b3b3b;
+      }
+    }
 
     &:last-child {
       border-right: 0;
@@ -117,6 +135,48 @@ body {
 
     .tweet_text {
       overflow: hidden;
+    }
+  }
+}
+/* style box search */
+.block-search-form-wrapper {
+  .toggle-search.form-submit {
+    position: absolute;
+    right: 20px;
+    top: 38px;
+    z-index: 99;
+  }
+
+  i {
+    font-size: 24px;
+    float: right;
+  }
+
+  form{
+    background: #fff;
+    border-bottom: 1px solid #333;
+    display: none;
+    height: 100px;
+    padding: 0 45px;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s ease-out 0s;
+    width: 100%;
+    z-index: 9;
+
+    &.avtive {
+      // display: block;
+    }
+
+    .form-text {
+      border: medium none;
+      padding: 5px;
+      width: 100%;
+      margin-top: 38px;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
