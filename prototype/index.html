@@ -29,19 +29,175 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeDefault.min.css">
   <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-  <nav>This is the main nav</nav>
-  <h1>Index page</h1>
+  <div id="header" class="header-warpper">
+    <div class="header-container clearfix">
+      <div class="header-logo">
+        <a class="logo-link" href="#">
+          <img src="/images/logo1.png">
+        </a>
+      </div>
 
+      <nav id="menu-bar">
+        <ul class="main-menu">
+          <li class="main-menu-item active ">
+            <a href="#">
+              <span class="link-text">home</span>
+            </a>
+          </li>
+          <li class="main-menu-item  ">
+            <a href="#">
+              <span class="link-text">pages</span>
+            </a>
+            <ul class="submenu">
+              <div class="submenu-content clearfix">
+                <li class="submenu-item ">
+                  <a href="#">page1</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="#">page2</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="#">page3</a>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li class="main-menu-item  ">
+            <a href="#">
+              <span class="link-text">portfolio</span>
+            </a>
+          </li>
+          <li class="main-menu-item  ">
+            <a href="#">
+              <span class="link-text">blog</span>
+            </a>
+          </li>
+          <li class="main-menu-item  ">
+            <a href="#">
+              <span class="link-text">shop</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <h1>Index page</h1>
   <div class="container">
     <p class="welcome-paragraph">Welcome to the hunght prototype project. This index page is used to build and overview of all the blocks and pages of the prototype. For each page type, please extend the layout.twig file and create a new page template in /pages/*.twig.</p>
   </div>
 
-  <footer>This is a footer</footer>
+  <footer class="footer-wrapper clearfix">
+    <div class="footer-column footer-column-1 ">
+      <div class="footer-column-content">
+        <div class="image-logo-footer">
+          <img src="/demo-images/logo-footer.png" alt="logo footer">
+        </div>
+        <div class="content-widget">
+          198 West 21th Street, Suite 721, New York NY 5109 Pacific Coast Highway, Los Angeles CA Email: youremail@yourdomain.com Phone: +88 (0) 101 0000 000 Fax: +88 (0) 202 0000 001
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-column footer-column-2 col">
+      <div class="footer-column-content">
+        <div class="latest-posts">
+          <h2 class="widget-title">Latest Posts</h2>
+          <ul class="box-list">
+            <li class="box-list__item">
+              <a href="#">item 1</a>
+            </li>
+            <li class="box-list__item">
+              <a href="#">item 1</a>
+            </li>
+            <li class="box-list__item">
+              <a href="#">item 1</a>
+            </li>
+            <li class="box-list__item">
+              <a href="#">item 1</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-column footer-column-3 col">
+      <div class="footer-column-content">
+        <div class="box-list-Tweets">
+          <h2 class="widget-title">Latest Tweets</h2>
+          <div class="content-widget">
+            <ul>
+              <li>
+                <span class="social_twitter fa fa-twitter"></span>
+                <div class="tweet_text">
+                  Don't forget to check out Capri - The Hot New <a target="_blank" href="http://twitter.com/search?q=WordPress">#WordPress</a> Theme You've Been Waiting For ;) <a target="_blank" href="http://t.co/RrBK5W8VsN">http://t.co/RrBK5W8VsN</a> 
+                  <a
+                  target="_blank" href="http://t.co/OGnBMeczUI">http://t.co/OGnBMeczUI</a>
+                </div>
+              </li>
+              <li>
+                <span class="social_twitter fa fa-twitter"></span>
+                <div class="tweet_text">
+                  Don't forget to check out Capri - The Hot New <a target="_blank" href="http://twitter.com/search?q=WordPress">#WordPress</a> Theme You've Been Waiting For ;) <a target="_blank" href="http://t.co/RrBK5W8VsN">http://t.co/RrBK5W8VsN</a> 
+                  <a
+                  target="_blank" href="http://t.co/OGnBMeczUI">http://t.co/OGnBMeczUI</a>
+                </div>
+              </li>
+              <li>
+                <span class="social_twitter fa fa-twitter "></span>
+                <div class="tweet_text">
+                  Don't forget to check out Capri - The Hot New <a target="_blank" href="http://twitter.com/search?q=WordPress">#WordPress</a> Theme You've Been Waiting For ;) <a target="_blank" href="http://t.co/RrBK5W8VsN">http://t.co/RrBK5W8VsN</a> 
+                  <a
+                  target="_blank" href="http://t.co/OGnBMeczUI">http://t.co/OGnBMeczUI</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-column footer-column-4">
+      <div class="footer-column-content">
+        <h2 class="widget-title">Latest Posts</h2>
+        <div class="widget-content box-latest-posts-image">
+          <ul class="box-latest-list">
+            <li class="latest-list_item">
+              <a href="#">
+                <img src="../../../demo-images/b-image-1a.jpg" alt="">
+              </a>
+            </li>
+            <li class="latest-list_item">
+              <a href="#">
+                <img src="../../../demo-images/b-image-1a.jpg" alt="">
+              </a>
+            </li>
+            <li class="latest-list_item">
+              <a href="#">
+                <img src="../../../demo-images/b-image-1a.jpg" alt="">
+              </a>
+            </li>
+            <li class="latest-list_item">
+              <a href="#">
+                <img src="../../../demo-images/b-image-1a.jpg" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <h2 class="widget-title">Newsletter</h2>
+        <div class="newsletter">
+          <p>hunght Newsletter are you ok</p>
+          <input type="mail">
+          <input type="submit">
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
   <div class="index-links">

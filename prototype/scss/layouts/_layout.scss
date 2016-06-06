@@ -31,3 +31,92 @@ body {
   font-size: 14px;
   line-height: 29px;
 }
+
+/* style header */
+
+.header-container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.header-logo {
+  padding-top: 5px;
+
+  .logo-link {
+    height: 90px;
+    float: left;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+/* style footer */
+.footer-column-content {
+  padding: 0 15px;
+}
+
+.footer-wrapper {
+  padding: 65px 25px;
+  background-color: #212121;
+  color: #a2a2a2;
+  border-top: 1px solid #fff;
+  line-height: 24px;
+
+  .footer-column  {
+    width: 25%;
+    float: left;
+    padding: 30px;
+    border-right: 1px solid #3b3b3b;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  .widget-title {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .image-logo-footer {
+    margin-bottom: 20px;
+  }
+}
+
+.box-latest-posts-image {
+  line-height: 0;
+
+  li {
+    display: inline-block;
+    width: 23.5%;
+    margin-right: 2%;
+    float: left;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-child(4n){
+      margin-right: 0;
+    }
+  }
+}
+
+.box-list-Tweets {
+  ul li {
+    list-style: none;
+    .social_twitter {
+      float: left;
+      font-size: 20px;
+      color: #b2dd4c;
+      margin-right: 15px;
+      margin-top: 5px;
+    }
+
+    .tweet_text {
+      overflow: hidden;
+    }
+  }
+}

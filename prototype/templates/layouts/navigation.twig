@@ -1,3 +1,66 @@
+
+{% set itemsMenu = [
+  {
+    'link':'#',
+    'title': 'home',
+    'class': 'active'
+  },
+  {
+    'link':'#',
+    'title': 'pages',
+
+    'contents': [
+      {
+        'link':'#',
+        'title': 'page1',
+        'class': ''
+      },
+      {
+        'link':'#',
+        'title': 'page2',
+        'class': ''
+      },
+      {
+        'link':'#',
+        'title': 'page3',
+        'class': ''
+      }
+    ]
+  },
+  {
+    'link':'#',
+    'title': 'portfolio'
+  },
+  {
+    'link':'#',
+    'title': 'blog'
+  },
+  {
+    'link':'#',
+    'title': 'shop'
+  }
+] %}
 {% block navigation %}
-  <nav>This is the main nav</nav>
+  <nav id="menu-bar">
+    <ul class="main-menu">
+      {% for item in itemsMenu %}
+        <li class="main-menu-item {{item.class}} ">
+          <a  href="{{ item.link }}">
+            <span class="link-text">{{ item.title }}</span>
+          </a>
+          {% if item.contents is not empty %}
+            <ul class="submenu">
+              <div class="submenu-content clearfix">
+                {% for content in item.contents %}
+                    <li class="submenu-item {{content.class}}">
+                      <a  href="{{ content.link }}">{{ content.title }}</a>
+                    </li>
+                {% endfor %}
+              </div>
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
 {% endblock %}
