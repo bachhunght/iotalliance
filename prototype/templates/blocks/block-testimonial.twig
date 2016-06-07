@@ -1,0 +1,56 @@
+{% set testimonial = [
+    {
+      'title': 'Super support!',
+      'quote': 'Success does not consist in never making blunders, but in never making the same one a second time.',
+      'link_img': '../images/testimonials-1.png',
+      'author_name': 'John Doe',
+      'author_description': 'Group CEO, Designer'
+    },
+    {
+      'title': 'Awesome design.',
+      'quote': 'Success does not consist in never making blunders, but in never making the same one a second time.',
+      'link_img': '../images/testimonials-2.png',
+      'author_name': 'John Doe',
+      'author_description': 'Group CEO, Designer'
+    },
+    {
+      'title': 'Great flexibility.',
+      'quote': 'Success does not consist in never making blunders, but in never making the same one a second time.',
+      'link_img': '../images/testimonials-3.png',
+      'author_name': 'John Doe',
+      'author_description': 'Group CEO, Designer'
+    }
+  ] 
+%}
+
+{% block testimonial %}
+  <div class="testimonial">
+    <div class="testimonial__description">
+      <h2>A Startup Theme Like No Other</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
+    </div>
+    <div class="clearfix">
+      {% for component in testimonial %}
+        <div class="testimonial__item">
+          <div class="testimonial__content">
+            <div class="testimonial__quote-title">
+              <p>{{ component.title }}</p>
+            </div>
+            <div class="testimonial__quote-text">
+              <blockquote><p>{{ component.quote }}</p></blockquote>
+            </div>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial__author-img">
+              <img width="110" src="{{ component.link_img }}" class="img-author">
+            </div>
+            <div class="testimonial__name-author">
+              <div class="testimonial__author-name">{{ component.author_name }}</div>
+              <div class="testimonial__author-description">{{ component.author_description }}</div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

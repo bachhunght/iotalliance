@@ -1,0 +1,123 @@
+.testimonial {
+  &__description {
+    margin-bottom: 35px;
+    padding: 0 10px;
+    text-align: center;
+
+    @media screen and (min-width: $tablet - 1) {
+      margin-bottom: 75px;
+    }
+
+    h2 {
+      color: #999;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $tablet - 1) {
+      @include gallery(4 of 12);
+      margin-bottom: 0;
+      width: 33% !important;
+    }
+  }
+
+  &__content {
+    background: #999;
+    border-radius: 3px;
+    line-height: 24px;
+    padding: 23px 35px 40px;
+    position: relative;
+
+    &:before {
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 12px solid #999;
+      content: "";
+      height: 0;
+      left: 44px;
+      position: absolute;
+      top: 100%;
+      width: 0;
+    }
+  }
+
+  &__quote-title {
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.6em;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+
+    &:before {
+      content: '\"';
+      display: inline-block;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    &:after {
+      content: '\"';
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &-author {
+    margin: 40px 0 0 35px;
+  }
+
+  &__author-img {
+    display: table-cell;
+    vertical-align: middle;
+
+    img {
+      border-radius: 100%;
+      max-width: 56px;
+    }
+  }
+
+  &__name-author {
+    display: table-cell;
+    line-height: 19px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  &__author-name {
+    font-weight: 700;
+  }
+}
+
+.testimonial--wide {
+  color: #fff;
+
+  .testimonial__description {
+    h2 {
+      color: #fff;
+    }
+  }
+
+  .testimonial__content {
+    background: rgba(255, 255, 255, 0.35);
+
+    &:before {
+      border-top: 12px solid rgba(255, 255, 255, 0.35);
+    }
+  }
+}
