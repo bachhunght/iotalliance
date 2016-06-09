@@ -22,6 +22,54 @@
 ]
 %}
 
+{% set content_service_icon = [
+  {
+    'icon_service' : '<i aria-hidden="true" class="fa fa-pencil"></i>',
+    'title_service' : 'Sketch',
+    'body_service' : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut',
+  },
+  {
+    'icon_service' : '<i aria-hidden="true" class="fa fa-tv"></i>',
+    'title_service' : 'Design',
+    'body_service' : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut',
+  },
+  {
+    'icon_service' : '<i aria-hidden="true" class="fa fa-wrench"></i>',
+    'title_service' : 'Test',
+    'body_service' : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut',
+  },
+  {
+    'icon_service' : '<i aria-hidden="true" class="fa fa-cog"></i>',
+    'title_service' : 'Develop',
+    'body_service' : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut',
+  }
+]
+%}
+
+{% set content_service_number = [
+  {
+    'icon_service' : '<i aria-hidden="true" class="fa fa-pencil"></i>',
+    'number_service' : '150',
+    'title_service' : 'Cups Of Coffee ',
+  },
+  {
+    'icon_service' : '<i aria-hidden="true" class="fa fa-tv"></i>',
+    'number_service' : '28',
+    'title_service' : 'Awards Won',
+  },
+  {
+    'icon_service' : '<i aria-hidden="true" class="fa fa-wrench"></i>',
+    'number_service' : '85',
+    'title_service' : 'Satisfied Clients ',
+  },
+  {
+    'icon_service' : '<i aria-hidden="true" class="fa fa-cog"></i>',
+    'number_service' : '235',
+    'title_service' : 'Projects Finished ',
+  }
+]
+%}
+
 {% block component_service %}
   <div class="box-service clearfix">
     {% for content in content_service %}
@@ -29,6 +77,28 @@
         <div class="box-service__items__img">{{ content.img_service }}</div>
         <h5 class="box-service__items__title">{{ content.title_service }}</h5>
         <div class="box-service__items__body"><p>{{ content.body_service }}</p></div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="box-service box-service--icon clearfix">
+    {% for content in content_service_icon %}
+      <div class="box-service__items col-sm-4">
+        <div class="box-service__items__icon">{{ content.icon_service }}</div>
+        <h5 class="box-service__items__title">{{ content.title_service }}</h5>
+        <div class="box-service__items__body"><p>{{ content.body_service }}</p></div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="box-service box-service--number clearfix">
+    {% for content in content_service_number %}
+      <div class="box-service__items col-sm-4">
+        <div class="box-service__header">
+          <div class="box-service__items__icon">{{ content.icon_service }}</div>
+          <div class="box-service__items__number">{{ content.number_service }}</div>
+        </div>
+        <h5 class="box-service__items__title">{{ content.title_service }}</h5>
       </div>
     {% endfor %}
   </div>

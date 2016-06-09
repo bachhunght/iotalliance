@@ -376,3 +376,38 @@ blockquote cite {
   text-align: center;
 }
 
+.container {
+  background: none;
+}
+
+.button {
+  background: $primary;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 30px;
+  outline: 0 none;
+  padding: 10px 35px;
+  text-transform: uppercase;
+
+  &:hover {
+    background: #212121;
+    opacity: 1;
+  }
+
+  &.button--border {
+    background: none;
+    border: 2px solid #777;
+    color: #777;
+    padding: 8px 33px;
+
+    &:hover {
+      background: $primary;
+      border: 2px solid $primary;
+      color: #fff;
+    }
+  }
+}

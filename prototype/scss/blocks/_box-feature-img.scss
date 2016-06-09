@@ -1,0 +1,50 @@
+.feature-img {
+  position: relative;
+
+  &__content {
+    @media screen and (min-width: $tablet - 1) {
+      left: 0;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 70px;
+    }
+
+    @media screen and (min-width: $desktop - 1) {
+      top: 140px;
+    }
+
+    .feature-img__views {
+      @media screen and (min-width: $tablet - 1) {
+        @include gallery(8 of 12);
+        float: none !important;
+        margin: 0 auto !important;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    h2 {
+      font-weight: 700;
+    }
+  }
+
+  &__body {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    .button {
+      margin: 5px;
+    }
+  }
+}
+
+.parallax-window {
+  background: transparent;
+  min-height: 673px;
+}

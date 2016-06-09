@@ -13,6 +13,17 @@
   zoom: 1;
 }
 
+*::before, *::after {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 //Enable font-smoothing
 html {
   @include helvetica;
@@ -53,10 +64,6 @@ body {
 }
 
 /* style footer */
-.footer-column-content {
-  padding: 0 15px;
-}
-
 .footer-wrapper {
   padding: 65px 25px;
   background-color: #212121;
@@ -68,7 +75,7 @@ body {
     padding: 30px;
 
     @media screen and (min-width: 769px) {
-      width: 50%;
+      @include gallery(6 of 12);
       float: left;
       border-right: 1px solid #3b3b3b;
       margin-bottom: 30px;
@@ -80,8 +87,9 @@ body {
     }
 
     @media screen and (min-width: 1025px) {
-      width: 25%;
+      @include gallery(3 of 12);
       padding: 30px;
+
       &.footer-column-2 {
         border-right: 1px solid #3b3b3b;
       }
@@ -106,6 +114,7 @@ body {
 
 .box-latest-posts-image {
   line-height: 0;
+  margin-bottom: 20px;  
 
   li {
     display: inline-block;
@@ -119,6 +128,16 @@ body {
     &:nth-child(4n){
       margin-right: 0;
     }
+  }
+}
+
+.newsletter {
+  .widget-title {
+    margin-bottom: 5px;
+  }
+
+  .description {
+    margin-bottom: 20px;
   }
 }
 
@@ -146,6 +165,8 @@ body {
     right: 20px;
     top: 38px;
     z-index: 99;
+    margin: 0 30px;
+    cursor: pointer;
   }
 
   i {
@@ -158,6 +179,7 @@ body {
     border-bottom: 1px solid #333;
     display: none;
     height: 100px;
+    left: 0;
     padding: 0 45px;
     position: absolute;
     top: 0;
@@ -166,7 +188,7 @@ body {
     z-index: 9;
 
     &.avtive {
-      // display: block;
+      display: block;
     }
 
     .form-text {
@@ -198,8 +220,8 @@ footer input.wpcf7-form-control.wpcf7-submit {
 footer input[type="submit"],
 footer input.wpcf7-form-control.wpcf7-submit {
   background-color: #b2dd4c;
-  border: 2px solid #b2dd4c;
   border-radius: 3px;
+  border: 2px solid #b2dd4c;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -213,4 +235,40 @@ footer input.wpcf7-form-control.wpcf7-submit {
   text-transform: uppercase;
   transition: color 0.15s ease-out 0s, background-color 0.15s ease-out 0s, border-color 0.15s ease-out 0s;
   width: auto;
+}
+
+.form-actions {
+  input {
+    background: none;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    padding: 10px 15px;
+    width: 100%;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    text-indent: -999em;
+
+    &:after {
+      background: $primary;
+      border-radius: 0 3px 3px 0;
+      content: '\f0a9';
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: 22px;
+      line-height: 25px;
+      padding: 8px 10px 7px;
+      position: absolute;
+      right: 4px;
+      text-align: center;
+      text-indent: 0;
+      top: -7px;
+    }
+  }
 }

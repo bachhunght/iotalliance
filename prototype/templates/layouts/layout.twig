@@ -25,9 +25,9 @@
             </a>
           </div>
           {% include 'navigation.twig' %}
-        </div>
-        <div class="block-search-form-wrapper">
-          {% include '../blocks/block-formsearch.twig' %}
+          <div class="block-search-form-wrapper">
+            {% include '../blocks/block-formsearch.twig' %}
+          </div>
         </div>
       </div>
     {% endblock %}
@@ -90,7 +90,7 @@
           <div class="footer-column footer-column-4">
             <div class="footer-column-content">
               <h2 class="widget-title">Latest Posts</h2>
-              <div class="widget-content box-latest-posts-image">
+              <div class="widget-content box-latest-posts-image clearfix">
                 <ul class="box-latest-list">
                   <li class="latest-list_item"><a href="#"><img src="../../../demo-images/b-image-1a.jpg" alt=""></a></li>
                   <li class="latest-list_item"><a href="#"><img src="../../../demo-images/b-image-1a.jpg" alt=""></a></li>
@@ -99,11 +99,13 @@
                 </ul>
               </div>
 
-              <h2 class="widget-title">Newsletter</h2>
               <div class="newsletter">
-                <p>hunght Newsletter are you ok</p>
-                <input type="mail">
-                <input class="wpcf7-form-control wpcf7-submit" type="submit">
+                <h2 class="widget-title">Newsletter</h2>
+                <p class="description">hunght Newsletter are you ok</p>
+                <div class="form-actions">
+                  <input type="mail">
+                  <a href="#" class="button">Check it out</a>
+                </div>
               </div>
             </div>
           </div>
@@ -118,6 +120,7 @@
       <script src="js/lib/jquery.min.js"></script>
       <script src="js/lib/chosen.jquery.min.js"></script>
       <script src="js/jquery.matchHeight-min.js"></script>
+      <script src="js/parallax.js"></script>
       <script src="js/script.js"></script>
     {% endblock %}
   </body>

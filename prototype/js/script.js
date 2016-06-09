@@ -49,6 +49,8 @@
     $(this).find('img').css({'margin-top': height_margin});
   });
 
+  $('.parallax-window').parallax({imageSrc: '../images/App2-Background-4.jpg'});
+
 }(this, this.document, this.jQuery));
 
 

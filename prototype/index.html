@@ -86,22 +86,22 @@
           </li>
         </ul>
       </nav>
-    </div>
-    <div class="block-search-form-wrapper">
+      <div class="block-search-form-wrapper">
 
-      <div class="block-search search-form-style1 right " id="block-search-form">
-        <div class="toggle-search form-submit">
-          <i class="ion-ios-search-strong"></i>
-          <i class="ion-close hidden"></i>
-        </div>
-        <form action="http://localhost:3000/" class="searchform" id="searchform" method="get" role="search">
-          <div>
-            <input type="text" id="s" name="s" placeholder="search" class="form-text">
-
+        <div class="block-search search-form-style1 right " id="block-search-form">
+          <div class="toggle-search form-submit">
+            <i class="ion-ios-search-strong"></i>
+            <i class="ion-close hidden"></i>
           </div>
-        </form>
-      </div>
+          <form action="http://localhost:3000/" class="searchform" id="searchform" method="get" role="search">
+            <div>
+              <input type="text" id="s" name="s" placeholder="search" class="form-text">
 
+            </div>
+          </form>
+        </div>
+
+      </div>
     </div>
   </div>
   <h1>Index page</h1>
@@ -181,7 +181,7 @@
     <div class="footer-column footer-column-4">
       <div class="footer-column-content">
         <h2 class="widget-title">Latest Posts</h2>
-        <div class="widget-content box-latest-posts-image">
+        <div class="widget-content box-latest-posts-image clearfix">
           <ul class="box-latest-list">
             <li class="latest-list_item">
               <a href="#">
@@ -206,11 +206,13 @@
           </ul>
         </div>
 
-        <h2 class="widget-title">Newsletter</h2>
         <div class="newsletter">
-          <p>hunght Newsletter are you ok</p>
-          <input type="mail">
-          <input class="wpcf7-form-control wpcf7-submit" type="submit">
+          <h2 class="widget-title">Newsletter</h2>
+          <p class="description">hunght Newsletter are you ok</p>
+          <div class="form-actions">
+            <input type="mail">
+            <a href="#" class="button">Check it out</a>
+          </div>
         </div>
       </div>
     </div>
@@ -231,6 +233,7 @@
   <script src="js/lib/jquery.min.js"></script>
   <script src="js/lib/chosen.jquery.min.js"></script>
   <script src="js/jquery.matchHeight-min.js"></script>
+  <script src="js/parallax.js"></script>
   <script src="js/script.js"></script>
 </body>
 
